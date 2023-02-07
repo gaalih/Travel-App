@@ -13,9 +13,9 @@ import * as Animatable from "react-native-animatable";
 import { Fontisto } from "@expo/vector-icons";
 
 const Home = () => {
-  const Navigation = useNavigation();
+  const navigation = useNavigation();
   useLayoutEffect(() => {
-    Navigation.setOptions({
+    navigation.setOptions({
       headerShown: false,
     });
   }, []);
@@ -74,7 +74,7 @@ const Home = () => {
       <View className="absolute z-50 self-center bottom-10 bg-transparent">
         <TouchableOpacity
           className="bg-transparent"
-          onPress={() => Navigation.navigate("Discover")}
+          onPress={() => navigation.navigate("Discover")}
         >
           <Animatable.View
             className=" bg-teal-400 backdrop-blur-lg text-slate-800 p-7 rounded-full shadow-xl shadow-cyan-700"
